@@ -1,1 +1,2 @@
-import time
+import time as t
+import
