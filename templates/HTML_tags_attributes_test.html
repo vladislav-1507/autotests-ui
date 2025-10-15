@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Изучение HTML тегов и атрибутов</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
-<body>
-<h1></h1>
+    <h1 id="header">Заголовок 1</h1>
+    <p>Common text <span style="color:blueviolet">Common text</span> Common text Common text</p>
+    <a href="https://playwright.dev/" target="_blank">
+        <img src="https://playwright.dev/img/logos/Browsers.png" width="200px" alt="img_browsers">
+    </a>
+<div>
+    <h3>Заголовок 3</h3>
+    <h6 style="background-color: burlywood;">Заголовок 6</h6>
+</div>
+<ul>
+    <li>element of list</li>
+    <li>element of list</li>
+    <li>element of list</li>
+</ul>
+<ol>
+    <li>element of ordered list</li>
+    <li>element of ordered list</li>
+    <li>element of ordered list</li>
+</ol>
+<form action="submit" method="POST">
+    <input type="text" value="name" name="username" placeholder="введите имя пользователя">
+    <button type="submit" disabled>Отправить</button>
+</form>
+<table style="width: 100%">
+    <caption>Заголовок таблицы</caption>
+  <tr> 
+    <th>Ячейка 1</th> 
+    <th>Ячейка 2</th> 
+  </tr> 
+  <tr> 
+    <td>Ячейка 1</td> 
+    <td>Ячейка 2</td> 
+  </tr>
+</table>
 </body>
 </html>
