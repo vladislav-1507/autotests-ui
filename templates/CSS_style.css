@@ -1,0 +1,18 @@
+h1, h2 {
+    background-color: rgb(218, 194, 162);
+}
+
+#first_id {color: blueviolet;}
+
+/* Этот селектор применится и к h1, и к ul */
+/* .first_class {color: darkmagenta;} */
+
+/* А этот селектор применится только к h1 с классом first_class */
+h1.first_class {color: darkmagenta;}
+
+/* Пример селектора потомков: стилизуем элементы списка внутри .first_class */
+.first_class > li {font-style: italic;}
+
+ul > li:nth-child(odd) {
+    background-color: blue;
+}
