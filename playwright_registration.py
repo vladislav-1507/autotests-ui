@@ -29,3 +29,4 @@ with sync_playwright() as playwright:
 
     expect(dashboard_toolbar).to_be_visible
     expect(dashboard_toolbar).to_have_text("Dashboard")
+    

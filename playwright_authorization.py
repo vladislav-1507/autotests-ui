@@ -22,11 +22,10 @@ with sync_playwright() as playwright:
     )
     expect(wrong_email_or_password_alert).to_be_visible()
     expect(wrong_email_or_password_alert).to_have_text("Wrong email or password")
-    
+
     page.wait_for_timeout(5000)
 
 # тест из вопроса:
-# from playwright.sync_api import sync_playwright, expect
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
     page = browser.new_page()
