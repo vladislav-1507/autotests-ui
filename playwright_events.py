@@ -13,7 +13,7 @@ log_request = lambda request: print(f"Request: {request.url}")
 # Она принимает в качестве аргумента объект `Response`, содержащий всю информацию об ответе.
 def log_response(response: Response):
     # Печатаем URL, на который пришел ответ от сервера.
-    print(f"Response: {response.url}")
+    print(f"Response: {response.url} {response.status}")
 
 
 def log_specific_requests(request: Request):
@@ -40,9 +40,11 @@ with sync_playwright() as playwright:
     # Playwright вызовет функцию `log_response`.
     page.on("response", log_response)
 
-    page.on("request", log_specific_requests)
+    #page.on("request", log_specific_requests)
 
-    # page.on("response", log_response_body)
+    page.on("response", log_response_body)
+
+    page.remove_listener("response", log_response_body)
 
     page.goto(
         "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login"

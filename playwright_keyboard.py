@@ -13,7 +13,7 @@ with sync_playwright() as playwright:
     email_input.focus()
 
     for character in "user@gmail.com":
-        page.keyboard.press(character, delay=300)
+        page.keyboard.type(character, delay=300)
 
     page.keyboard.press("ControlOrMeta+A")
 
