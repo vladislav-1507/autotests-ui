@@ -22,12 +22,12 @@ def test_wrong_email_or_password_authorization(
     email_input = chromium_page.get_by_test_id("login-form-email-input").locator(
         "input"
     )
-    email_input.fill("user.name@gmail.com")
+    email_input.fill(email)
 
     password_input = chromium_page.get_by_test_id("login-form-password-input").locator(
         "input"
     )
-    password_input.fill("password")
+    password_input.fill(password)
 
     login_button = chromium_page.get_by_test_id("login-page-login-button")
     login_button.click()
