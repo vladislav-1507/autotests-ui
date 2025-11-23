@@ -14,9 +14,8 @@ from pages.login_page import LoginPage
     ],
 )
 def test_wrong_email_or_password_authorization(
-    chromium_page: Page, email: str, password: str
+    login_page: LoginPage, email: str, password: str
 ):
-    login_page = LoginPage(page=chromium_page)
     login_page.visit(
         "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login"
     )
