@@ -212,10 +212,10 @@ class CreateCoursePage(BasePage):
         )
         exercise_title_input = self.page.get_by_test_id(
             f"create-course-exercise-form-title-{index}-input"
-        )
+        ).locator("input, textarea")
         exercise_description_input = self.page.get_by_test_id(
             f"create-course-exercise-form-description-{index}-input"
-        )
+        ).locator("input, textarea")
 
         expect(exercise_subtitle).to_be_visible()
         expect(exercise_subtitle).to_have_text(f"#{index + 1} Exercise")
@@ -232,7 +232,9 @@ class CreateCoursePage(BasePage):
         )
         exercise_description_input = self.page.get_by_test_id(
             f"create-course-exercise-form-description-{index}-input"
-        )
+        ).locator("input, textarea")
+
+        exercise_title_input = exercise_title_input.locator("input, textarea")
 
         exercise_title_input.fill(title)
         expect(exercise_title_input).to_have_value(title)
